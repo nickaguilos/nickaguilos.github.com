@@ -1,7 +1,41 @@
-/* 
-	Nick Aguilos Portfolio V5
-*/
-html {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; }
+/*
+Error: Invalid CSS after "}": expected "}", was ""
+        on line 139 of css/nickaguilos-v5.scss
 
-/*# sourceMappingURL=nickaguilos-v5.css.map */
+134: .footnote_ts {
+135:   margin: var(--vspace-0) 0 var(--vspace-2) 0;
+136:   font-size: 0.6667em;  
+137:   border-top: 1px solid #ccc;
+138:   line-height: 2em;
+139: }
+
+Backtrace:
+css/nickaguilos-v5.scss:139
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:667:in `block'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 139 of css/nickaguilos-v5.scss\A \A 134: .footnote_ts {\A 135:   margin: var(--vspace-0) 0 var(--vspace-2) 0;\A 136:   font-size: 0.6667em;  \A 137:   border-top: 1px solid #ccc;\A 138:   line-height: 2em;\A 139: }"; }
