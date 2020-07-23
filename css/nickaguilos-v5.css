@@ -1,41 +1,95 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 139 of css/nickaguilos-v5.scss
-
-134: .footnote_ts {
-135:   margin: var(--vspace-0) 0 var(--vspace-2) 0;
-136:   font-size: 0.6667em;  
-137:   border-top: 1px solid #ccc;
-138:   line-height: 2em;
-139: }
-
-Backtrace:
-css/nickaguilos-v5.scss:139
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:667:in `block'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Users/nick/.rvm/gems/ruby-2.4.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+/* 
+	Nick Aguilos Portfolio V5
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 139 of css/nickaguilos-v5.scss\A \A 134: .footnote_ts {\A 135:   margin: var(--vspace-0) 0 var(--vspace-2) 0;\A 136:   font-size: 0.6667em;  \A 137:   border-top: 1px solid #ccc;\A 138:   line-height: 2em;\A 139: }"; }
+:root {
+  --border: #eee; }
+
+html {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; }
+
+img {
+  width: 100%; }
+
+/* Sections */
+#site-head, #site-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 1 / 13; }
+
+#site-head {
+  padding: 1.2em 0 2.2em 0;
+  border-bottom: 1px solid var(--border);
+  grid-area: header; }
+  #site-head img {
+    width: 63px; }
+  #site-head nav a {
+    text-decoration: none; }
+
+#site-foot {
+  grid-area: footer;
+  padding: 2.2em 0; }
+
+aside {
+  grid-area: sidebar; }
+
+main {
+  grid-area: content; }
+
+/* Typographic Rules */
+html {
+  font-size: 112.5%; }
+
+/*18px*/
+body {
+  background-color: white;
+  font-weight: 400;
+  line-height: 1.65; }
+
+p {
+  margin-bottom: 1.15rem; }
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 400;
+  line-height: 1.15; }
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em; }
+
+h2 {
+  font-size: 2.441em; }
+
+h3 {
+  font-size: 1.953em; }
+
+h4 {
+  font-size: 1.563em; }
+
+h5 {
+  font-size: 1.25em; }
+
+small, .text_small {
+  font-size: 0.8em; }
+
+.subheading {
+  font-size: 3.052em;
+  margin-top: -0.7em;
+  opacity: 0.2; }
+
+/* Grid */
+.grid {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 2em;
+  grid-template-areas: "header header header header header header header header" "sidebar sidebar . content content content content ." ". . . footer footer footer footer footer"; }
+  @media screen and (max-width: 800px) {
+    .grid {
+      padding: 1em;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" "content content content content" "footer footer footer footer"; } }
+
+/*# sourceMappingURL=nickaguilos-v5.css.map */
