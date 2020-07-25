@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<title>Nick Aguilos &middot; About</title>
 	<link rel="stylesheet" href="/css/nickaguilos-v5.css">
 </head>
@@ -9,11 +10,25 @@
 	<header id="site-head">
 		<a href="/about"><img src="/images/logos/logo@2x.png" alt="Nick Aguilos"></a>
 
-		<nav>
+		<nav class="hidden-on-mobile">
 			<a href="/about">About</a>
 			<a href="/Portfolio">Portfolio</a>
 			<a href="http://store.nickaguilos.com">Store</a>
 			<a href="/blog">Blog</a>
+		</nav>
+
+		<nav id="hamburger" class="hidden-on-desktop">
+			<input type="checkbox">
+
+			<span></span>
+			<span></span>
+
+			<div id="menu-overlay">
+				<a href="/about">About</a>
+				<a href="/Portfolio">Portfolio</a>
+				<a href="http://store.nickaguilos.com">Store</a>
+				<a href="/blog">Blog</a>
+			</div>
 		</nav>
 	</header>
 
@@ -73,7 +88,7 @@
 	</main>
 
 	<footer id="site-foot">
-		<small>Copyright 2020. Nick Aguilos Studio</small>
+		Copyright 2020. Nick Aguilos Studio
 
 		<nav>
 			<a href="http://instagram.com/nickaguilos">Instagram</a>

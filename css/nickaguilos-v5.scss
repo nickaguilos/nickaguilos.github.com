@@ -4,14 +4,24 @@
 
 :root {
 	--border: #eee;
+	--dark-gray: #222;
 }
 
 html {
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+	padding: 1em;
+
+	@media screen and (max-width: 800px) {
+		padding: 0.75em;
+	}
 }
 
 img {
 	width: 100%;
+}
+
+a {
+	color: var(--dark-gray);
 }
 
 /* Sections */
@@ -22,26 +32,16 @@ img {
 	grid-column: 1 / 13;
 }
 
-#site-head {
-	padding: 1.2em 0 2.2em 0;
-	border-bottom: 1px solid var(--border);
-	grid-area: header;
-	img {
-		width: 63px;
-	}
-
-	nav a {
-		text-decoration: none;
-	}
-}
 
 #site-foot {
 	grid-area: footer;
 	padding: 2.2em 0;
-}
+	font-size: 0.625em;
+	opacity: 0.5;
 
-aside {
-	grid-area: sidebar;
+	a {
+		margin-left: 1em;
+	}
 }
 
 main {
@@ -49,7 +49,17 @@ main {
 }
 
 
-
+// Utilities
 @import 'type',
-		'grid';
+		'grid',
+		'helpers';
+
+// Sections
+@import 'section-aside',
+		'section-head';
+
+// Pages
+@import 'page-about'
+
+
 
