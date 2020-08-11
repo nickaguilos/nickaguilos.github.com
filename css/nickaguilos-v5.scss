@@ -2,64 +2,19 @@
 	Nick Aguilos Portfolio V5
 */
 
-:root {
-	--border: #eee;
-	--dark-gray: #222;
-}
-
-html {
-	font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-	padding: 1em;
-
-	@media screen and (max-width: 800px) {
-		padding: 0.75em;
-	}
-}
-
-img {
-	width: 100%;
-}
-
-a {
-	color: var(--dark-gray);
-}
-
-/* Sections */
-#site-head, #site-foot {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	grid-column: 1 / 13;
-}
-
-
-#site-foot {
-	grid-area: footer;
-	padding: 2.2em 0;
-	font-size: 0.625em;
-	opacity: 0.5;
-
-	a {
-		margin-left: 1em;
-	}
-}
-
-main {
-	grid-area: content;
-}
-
-
 // Utilities
-@import 'type',
-		'grid',
-		'helpers';
+@use 'defaults';
+@use 'typography';
+@use 'grid';
+@use 'helpers';
 
 // Sections
-@import 'section-aside',
-		'section-head';
+@use 'layout';
 
 // Pages
-@import 'page-about'
+@use 'page-about';
+
+
 
 
 

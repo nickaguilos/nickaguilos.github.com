@@ -1,82 +1,73 @@
-/* 
-	Nick Aguilos Portfolio V5
-*/
-:root {
-  --border: #eee;
-  --dark-gray: #222; }
-
 html {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-  padding: 1em; }
-  @media screen and (max-width: 800px) {
-    html {
-      padding: 0.75em; } }
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  padding: 1em;
+}
+@media screen and (max-width: 800px) {
+  html {
+    padding: 0.75em;
+  }
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 a {
-  color: var(--dark-gray); }
-
-/* Sections */
-#site-head, #site-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-column: 1 / 13; }
-
-#site-foot {
-  grid-area: footer;
-  padding: 2.2em 0;
-  font-size: 0.625em;
-  opacity: 0.5; }
-  #site-foot a {
-    margin-left: 1em; }
-
-main {
-  grid-area: content; }
+  color: #222;
+}
 
 /* Typographic Rules */
 html {
-  font-size: 112.5%; }
+  font-size: 112.5%;
+}
 
 /*18px*/
 body {
   background-color: white;
   font-weight: 400;
-  line-height: 1.65; }
+  line-height: 1.65;
+}
 
 p {
-  margin-bottom: 1.15rem; }
+  margin-bottom: 1.15rem;
+}
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
   font-weight: 400;
-  line-height: 1.15; }
+  line-height: 1.15;
+}
 
 h1 {
   margin-top: 0;
-  font-size: 3.052em; }
+  font-size: 3.052em;
+}
 
 h2 {
-  font-size: 2.441em; }
+  font-size: 2.441em;
+}
 
 h3 {
-  font-size: 1.953em; }
+  font-size: 1.953em;
+}
 
 h4 {
-  font-size: 1.563em; }
+  font-size: 1.563em;
+}
 
 h5 {
-  font-size: 1.25em; }
+  font-size: 1.25em;
+}
 
 small, .text_small {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .subheading {
   font-size: 3.052em;
   margin-top: -0.7em;
-  opacity: 0.2; }
+  opacity: 0.2;
+}
 
 /* Grid */
 .grid {
@@ -85,100 +76,149 @@ small, .text_small {
   margin: 0 auto;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 2em;
-  grid-template-areas: "header header header header header header header header" "sidebar sidebar . content content content content ." ". . . footer footer footer footer footer"; }
-  @media screen and (max-width: 800px) {
-    .grid {
-      padding: 1em;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" "content content content content" "footer footer footer footer"; } }
+  grid-template-areas: "header header header header header header header header" "sidebar sidebar . content content content content ." ". . . footer footer footer footer footer";
+}
+@media screen and (max-width: 800px) {
+  .grid {
+    padding: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" "content content content content" "footer footer footer footer";
+  }
+}
 
 @media screen and (min-width: 801px) {
   .hidden-on-desktop {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .hidden-on-mobile {
-    display: none; } }
-
-aside {
-  grid-area: sidebar;
-  font-size: 0.7777em; }
-  aside ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 3.333em; }
-    aside ul li {
-      display: flex;
-      margin-bottom: 0.77em; }
-      aside ul li span {
-        flex: 1;
-        opacity: 0.5; }
-      aside ul li a {
-        flex: 2; }
+    display: none;
+  }
+}
 
 #site-head {
   padding: 1.2em 0 2.2em 0;
   border-bottom: 1px solid var(--border);
-  grid-area: header; }
-  #site-head img {
-    width: 63px; }
-  #site-head nav a {
-    text-decoration: none;
-    margin-left: 1em; }
-  #site-head #hamburger input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: 50px;
-    right: 11px;
-    cursor: pointer;
-    opacity: 0;
-    /* hide this */
-    z-index: 3;
-    /* and place it over the hamburger */ }
-    #site-head #hamburger input:checked ~ span {
-      opacity: 1;
-      transform: rotate(45deg) translate(-8px, -7px);
-      background: #232323; }
-      #site-head #hamburger input:checked ~ span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(0, -1px); }
-    #site-head #hamburger input:checked ~ div {
-      transform: none; }
-  #site-head #hamburger span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    margin-bottom: 5px;
-    background: var(--dark-gray);
-    position: relative;
-    z-index: 4;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
-    #site-head #hamburger span:first-child {
-      transform-origin: 0% 0%; }
-    #site-head #hamburger span:nth-last-child(2) {
-      transform-origin: 0% 100%; }
-  #site-head #menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    font-size: 2em; }
+  grid-area: header;
+}
+#site-head img {
+  width: 63px;
+}
+#site-head nav a {
+  text-decoration: none;
+  margin-left: 1em;
+}
+#site-head #hamburger input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 50px;
+  right: 11px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 3;
+  /* and place it over the hamburger */
+}
+#site-head #hamburger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-8px, -7px);
+  background: #232323;
+}
+#site-head #hamburger input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#site-head #hamburger input:checked ~ div {
+  transform: none;
+}
+#site-head #hamburger span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  background: var(--dark-gray);
+  position: relative;
+  z-index: 4;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#site-head #hamburger span:first-child {
+  transform-origin: 0% 0%;
+}
+#site-head #hamburger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+#site-head #menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  font-size: 2em;
+}
+
+aside {
+  grid-area: sidebar;
+  font-size: 0.7777em;
+}
+aside ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 3.333em;
+}
+aside ul li {
+  display: flex;
+  margin-bottom: 0.77em;
+}
+aside ul li span {
+  flex: 1;
+  opacity: 0.5;
+}
+aside ul li a {
+  flex: 2;
+}
+
+/* Sections */
+#site-head, #site-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 1/13;
+}
+
+#site-foot {
+  grid-area: footer;
+  padding: 2.2em 0;
+  font-size: 0.625em;
+  opacity: 0.5;
+}
+#site-foot a {
+  margin-left: 1em;
+}
+
+main {
+  grid-area: content;
+}
 
 @media screen and (max-width: 800px) {
   #about.grid {
     padding: 1em;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "header header header header" "content content content content" "sidebar sidebar sidebar sidebar" "footer footer footer footer"; } }
+    grid-template-areas: "header header header header" "content content content content" "sidebar sidebar sidebar sidebar" "footer footer footer footer";
+  }
+}
 
-/*# sourceMappingURL=nickaguilos-v5.css.map */
+/* 
+	Nick Aguilos Portfolio V5
+*/

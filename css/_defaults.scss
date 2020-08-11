@@ -1,0 +1,19 @@
+@use 'variables' as var;
+
+html {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+	padding: 1em;
+
+	@media screen and (max-width: 800px) {
+		padding: 0.75em;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	color: var.$dark-gray;
+}
+
