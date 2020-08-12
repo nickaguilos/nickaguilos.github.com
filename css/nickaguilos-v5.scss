@@ -12,8 +12,8 @@
 @use 'layout';
 
 // Pages
-@use 'page-about';
-
+@import 'page-about';
+@import 'page-blog';
 
 
 

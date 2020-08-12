@@ -1,26 +1,46 @@
 // Section Head Styles
+@use 'variables' as var;
+
 #site-head {
-	padding: 1.2em 0 2.2em 0;
-	border-bottom: 1px solid var(--border);
-	grid-area: header;
+	padding: 2em 0;
+	border-bottom: 1px solid var.$border;
+
 	img {
 		width: 63px;
 	}
 
-	nav a {
-		text-decoration: none;
-		margin-left: 1em;
+	nav {
+		text-align: right;
+
+		a {
+			text-decoration: none;
+			margin-left: 1em;
+			position: relative;
+
+			&.active, &:hover, &:focus {
+				&::before{
+					content: '';
+					height: 6px;
+					width: 6px;
+					border-radius: 100px;
+					background-color: var.$yellow;
+					display: inline-block;
+					position: absolute;
+					top: 150%;
+					left: 50%;
+				}
+			}
+		}
 	}
 
 	#hamburger {
-
 		input {
 			display: block;
 			width: 40px;
 			height: 32px;
 			position: absolute;
-			top: 50px;
-			right: 11px;
+			top: 60px;
+			right: 16px;
 			
 			cursor: pointer;
 			
@@ -47,7 +67,7 @@
 			width: 30px;
 			height: 2px;
 			margin-bottom: 5px;
-			background: var(--dark-gray);
+			background: var.$dark-gray;
 			position: relative;
 			z-index: 4;
 
@@ -85,7 +105,7 @@
 
 // Sidebar
 aside {
-	grid-area: sidebar;
+	// grid-area: sidebar;
 	font-size: 0.7777em;
 
 	ul {
@@ -114,7 +134,6 @@ aside {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	grid-column: 1 / 13;
 }
 
 
@@ -127,8 +146,4 @@ aside {
 	a {
 		margin-left: 1em;
 	}
-}
-
-main {
-	grid-area: content;
 }

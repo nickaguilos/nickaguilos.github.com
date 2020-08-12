@@ -1,0 +1,30 @@
+@use 'variables' as var;
+
+#blog {
+    .article-title {
+        font-size: 1.5rem;
+        
+        a {
+            text-decoration: none;
+        }
+    }
+
+    aside {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        max-width: 35vw;
+        z-index: -1;
+
+        .hero-img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        @media (max-width: 800px) {
+            position: static;
+            max-width: 100%;
+        }
+    }
+}

@@ -3,22 +3,39 @@
 	display: grid;
 	max-width: 1200px;
 	margin: 0 auto;
+	gap: 1em;
 	grid-template-columns: repeat(8, 1fr);
-	grid-gap: 2em;
 	grid-template-areas:
-	"header header header header header header header header"
-	"sidebar sidebar . content content content content ."
-	". . . footer footer footer footer footer"
+		"hd hd hd hd hd hd hd hd"
+		"sd sd . cn cn cn cn ."
+		".	.  . ft ft ft ft ."
 	;
+
+	#site-head {
+		grid-area: hd;
+	}
+
+	#content {
+		grid-area: cn;
+	}
+
+	#sidebar {
+		grid-area: sd;
+	}
+
+	#site-foot {
+		margin-top: 100px;
+		grid-area: ft;
+	}
 
 	@media screen and (max-width: 800px) {
 		padding: 1em;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas: 
-		"header header header header"
-		"sidebar sidebar sidebar sidebar"
-		"content content content content"
-		"footer footer footer footer"
+		"hd hd hd hd"
+		"cn cn cn cn"
+		"sd sd sd sd"
+		"ft ft ft ft"
 		;
 	}
 }

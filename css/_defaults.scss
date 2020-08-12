@@ -2,11 +2,11 @@
 
 html {
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-	padding: 1em;
+	padding: 0;
+}
 
-	@media screen and (max-width: 800px) {
-		padding: 0.75em;
-	}
+body {
+	margin: 0;
 }
 
 img {
@@ -15,5 +15,10 @@ img {
 
 a {
 	color: var.$dark-gray;
+	transition: color, 0.3s;
+
+	&:hover {
+		color: lighten(var.$dark-gray, 50%);
+	}
 }
 

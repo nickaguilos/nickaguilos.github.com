@@ -1,11 +1,10 @@
 html {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  padding: 1em;
+  padding: 0;
 }
-@media screen and (max-width: 800px) {
-  html {
-    padding: 0.75em;
-  }
+
+body {
+  margin: 0;
 }
 
 img {
@@ -14,14 +13,17 @@ img {
 
 a {
   color: #222;
+  transition: color, 0.3s;
+}
+a:hover {
+  color: #a2a2a2;
 }
 
 /* Typographic Rules */
 html {
-  font-size: 112.5%;
+  font-size: 18px;
 }
 
-/*18px*/
 body {
   background-color: white;
   font-weight: 400;
@@ -40,23 +42,23 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.052em;
+  font-size: 3.052rem;
 }
 
 h2 {
-  font-size: 2.441em;
+  font-size: 2.441rem;
 }
 
 h3 {
-  font-size: 1.953em;
+  font-size: 1.953rem;
 }
 
 h4 {
-  font-size: 1.563em;
+  font-size: 1.563rem;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 small, .text_small {
@@ -65,8 +67,9 @@ small, .text_small {
 
 .subheading {
   font-size: 3.052em;
-  margin-top: -0.7em;
+  margin-top: 10px;
   opacity: 0.2;
+  line-height: 1;
 }
 
 /* Grid */
@@ -74,15 +77,28 @@ small, .text_small {
   display: grid;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 1em;
   grid-template-columns: repeat(8, 1fr);
-  grid-gap: 2em;
-  grid-template-areas: "header header header header header header header header" "sidebar sidebar . content content content content ." ". . . footer footer footer footer footer";
+  grid-template-areas: "hd hd hd hd hd hd hd hd" "sd sd . cn cn cn cn ." ".	.  . ft ft ft ft .";
+}
+.grid #site-head {
+  grid-area: hd;
+}
+.grid #content {
+  grid-area: cn;
+}
+.grid #sidebar {
+  grid-area: sd;
+}
+.grid #site-foot {
+  margin-top: 100px;
+  grid-area: ft;
 }
 @media screen and (max-width: 800px) {
   .grid {
     padding: 1em;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" "content content content content" "footer footer footer footer";
+    grid-template-areas: "hd hd hd hd" "cn cn cn cn" "sd sd sd sd" "ft ft ft ft";
   }
 }
 
@@ -99,24 +115,38 @@ small, .text_small {
 }
 
 #site-head {
-  padding: 1.2em 0 2.2em 0;
-  border-bottom: 1px solid var(--border);
-  grid-area: header;
+  padding: 2em 0;
+  border-bottom: 1px solid #eee;
 }
 #site-head img {
   width: 63px;
 }
+#site-head nav {
+  text-align: right;
+}
 #site-head nav a {
   text-decoration: none;
   margin-left: 1em;
+  position: relative;
+}
+#site-head nav a.active::before, #site-head nav a:hover::before, #site-head nav a:focus::before {
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 100px;
+  background-color: #f7b500;
+  display: inline-block;
+  position: absolute;
+  top: 150%;
+  left: 50%;
 }
 #site-head #hamburger input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
-  top: 50px;
-  right: 11px;
+  top: 60px;
+  right: 16px;
   cursor: pointer;
   opacity: 0;
   /* hide this */
@@ -139,7 +169,7 @@ small, .text_small {
   width: 30px;
   height: 2px;
   margin-bottom: 5px;
-  background: var(--dark-gray);
+  background: #222;
   position: relative;
   z-index: 4;
   transform-origin: 4px 0px;
@@ -169,7 +199,6 @@ small, .text_small {
 }
 
 aside {
-  grid-area: sidebar;
   font-size: 0.7777em;
 }
 aside ul {
@@ -194,7 +223,6 @@ aside ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  grid-column: 1/13;
 }
 
 #site-foot {
@@ -207,18 +235,30 @@ aside ul li a {
   margin-left: 1em;
 }
 
-main {
-  grid-area: content;
-}
-
-@media screen and (max-width: 800px) {
-  #about.grid {
-    padding: 1em;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "header header header header" "content content content content" "sidebar sidebar sidebar sidebar" "footer footer footer footer";
-  }
-}
-
 /* 
 	Nick Aguilos Portfolio V5
 */
+#blog .article-title {
+  font-size: 1.5rem;
+}
+#blog .article-title a {
+  text-decoration: none;
+}
+#blog aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 35vw;
+  z-index: -1;
+}
+#blog aside .hero-img {
+  object-fit: cover;
+  height: 100%;
+}
+@media (max-width: 800px) {
+  #blog aside {
+    position: static;
+    max-width: 100%;
+  }
+}
