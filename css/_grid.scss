@@ -7,7 +7,8 @@
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-areas:
 		"hd hd hd hd hd hd hd hd"
-		"sd sd . cn cn cn cn ."
+		"sd sd . cn cn cn cn cn"
+		"bn bn bn bn bn bn bn bn"
 		".	.  . ft ft ft ft ."
 	;
 
@@ -28,12 +29,17 @@
 		grid-area: ft;
 	}
 
+	#big-nav {
+		grid-area: bn;
+	}
+
 	@media screen and (max-width: 800px) {
 		padding: 1em;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas: 
 		"hd hd hd hd"
 		"cn cn cn cn"
+		"bn bn bn bn"
 		"sd sd sd sd"
 		"ft ft ft ft"
 		;

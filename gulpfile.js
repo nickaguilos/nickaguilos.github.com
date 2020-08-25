@@ -41,8 +41,8 @@ function watch() {
 		}
 	});
 	gulp.watch('./css/**/*.scss', style);
-	gulp.watch('./app/**/*.html').on('change', browserSync.reload);
-	gulp.watch('./app/js/**/*.js').on('change', browserSync.reload);
+	gulp.watch('./**/*.html').on('change', browserSync.reload);
+	gulp.watch('./**/*.js').on('change', browserSync.reload);
 }
 
 // To make this commaned available via the cli. Older gulp versions (<v4) didnt need this

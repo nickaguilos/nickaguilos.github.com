@@ -1,0 +1,27 @@
+@use 'variables' as var;
+
+#home {
+    background-image: url('/images/heroes/homepage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var.$dark-gray;
+
+    color: #fff;
+
+    #big-nav {
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 30px;
+            padding: 2em 1em;
+        }
+    }
+
+    #site-foot {
+        a {
+            color: #fff;
+        }
+    }
+}
