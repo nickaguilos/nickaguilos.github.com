@@ -266,23 +266,40 @@ aside ul li a {
   }
 }
 
-#home {
+#portfolio {
   background-image: url("/images/heroes/homepage.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #222;
   color: #fff;
 }
-#home #big-nav {
-  display: flex;
-  justify-content: space-between;
+#portfolio #big-nav {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  text-align: center;
 }
-#home #big-nav a {
+#portfolio #big-nav > div {
+  grid-column: span 2;
+}
+#portfolio #big-nav > div:hover > div {
+  display: block;
+}
+#portfolio #big-nav > div > div {
+  background: black;
+  height: 100vw;
+  position: absolute;
+  width: 19vw;
+  top: 0;
+  z-index: -1;
+  display: none;
+  overflow: hidden;
+}
+#portfolio #big-nav a {
   color: #fff;
   text-decoration: none;
   font-size: 30px;
   padding: 2em 1em;
 }
-#home #site-foot a {
+#portfolio #site-foot a {
   color: #fff;
 }
