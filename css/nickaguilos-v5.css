@@ -286,13 +286,16 @@ aside ul li a {
 }
 #portfolio #big-nav > div > div {
   background: black;
-  height: 100vw;
+  height: 100vh;
   position: absolute;
   width: 19vw;
   top: 0;
   z-index: -1;
   display: none;
   overflow: hidden;
+}
+#portfolio #big-nav video {
+  height: 100vh;
 }
 #portfolio #big-nav a {
   color: #fff;

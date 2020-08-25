@@ -27,7 +27,7 @@
 
             > div {
                 background: black;
-                height: 100vw;
+                height: 100vh;
                 position: absolute;
                 width: 19vw;
                 top: 0;
@@ -35,6 +35,10 @@
                 display: none;
                 overflow: hidden;
             }
+        }
+
+        video {
+            height: 100vh;
         }
 
         a {
