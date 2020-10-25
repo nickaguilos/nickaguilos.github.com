@@ -28,4 +28,15 @@
             max-width: 100%;
         }
     }
+
+    // Subtype
+    &.article {
+        .timestamp {
+            color: var.$gray;
+        }
+
+        #content p:last-of-type {
+            margin-bottom: 3em;
+        }
+    }
 }
