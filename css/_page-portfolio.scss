@@ -1,71 +1,87 @@
 @use 'variables' as var;
 
 #portfolio {
-    background-image: url('/images/heroes/homepage.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var.$dark-gray;
+    
+    &.main {
+        background-image: url('/images/heroes/homepage.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var.$dark-gray;
+        color: #fff;
 
-    color: #fff;
-
-    #big-nav {
-        // display: flex;
-        // justify-content: space-between;
-
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        text-align: center;
-
-        @media screen and (max-width: 800px) {
-            grid-template-columns: 1fr;
-            text-align: left;;
-        }
-
-        > div {
-            grid-column: span 2;
-
-            &:hover {
-                > div {
-                    display: block;
-
-                    @media screen and (max-width: 800px) {
-                        display: none;
+        #big-nav {
+            // display: flex;
+            // justify-content: space-between;
+    
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            text-align: center;
+    
+            @media screen and (max-width: 800px) {
+                grid-template-columns: 1fr;
+                text-align: left;;
+            }
+    
+            > div {
+                grid-column: span 2;
+    
+                &:hover {
+                    > div {
+                        display: block;
+    
+                        @media screen and (max-width: 800px) {
+                            display: none;
+                        }
                     }
                 }
+    
+                > div {
+                    background: black;
+                    height: 100vh;
+                    position: absolute;
+                    width: 19vw;
+                    top: 0;
+                    z-index: -1;
+                    display: none;
+                    overflow: hidden;
+                }
             }
-
-            > div {
-                background: black;
+    
+            video {
                 height: 100vh;
-                position: absolute;
-                width: 19vw;
-                top: 0;
-                z-index: -1;
-                display: none;
-                overflow: hidden;
+            }
+    
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 2em 1em;
+                display: inline-block;
+    
+                @media screen and (max-width: 800px) {
+                    padding: 0.5em 0;
+                }
             }
         }
-
-        video {
-            height: 100vh;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 30px;
-            padding: 2em 1em;
-            display: inline-block;
-
-            @media screen and (max-width: 800px) {
-                padding: 0.5em 0;
+    
+        #site-foot {
+            a {
+                color: #fff;
             }
         }
     }
 
-    #site-foot {
-        a {
-            color: #fff;
+    &.thumbs-page {
+        background: linear-gradient(to bottom, #fff 30%, #fafafa 30%);
+
+        #thumbs {
+            margin-top: 2em;
+            .thumb-wrapper {
+                display: inline-block;
+                width: 100%;
+                height: 300px;
+                background-color: var.$dark-gray;
+            }
         }
     }
 }

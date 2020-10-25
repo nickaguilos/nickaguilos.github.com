@@ -9,7 +9,7 @@
 		"hd hd hd hd hd hd hd hd"
 		"sd sd . cn cn cn cn cn"
 		"bn bn bn bn bn bn bn bn"
-		".	.  . ft ft ft ft ."
+		"ft ft ft ft ft ft ft ft"
 	;
 
 	#site-head {
@@ -29,8 +29,18 @@
 		grid-area: ft;
 	}
 
-	#big-nav {
+	#big-nav, #thumbs {
 		grid-area: bn;
+	}
+
+	#thumbs {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+
+		@media screen and (max-width: 800px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	@media screen and (max-width: 800px) {
