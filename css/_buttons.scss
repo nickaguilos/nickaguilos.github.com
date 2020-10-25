@@ -2,7 +2,7 @@
 @use 'variables' as var;
 
 .button {
-    font-weight: bold;
+    font-weight: 600;
     padding: 1em 2em;
     background-color: var.$yellow;
     color: var.$dark-gray;
